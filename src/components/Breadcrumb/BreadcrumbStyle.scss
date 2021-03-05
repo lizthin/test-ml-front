@@ -1,0 +1,19 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/mixins.scss";
+
+
+.flex-categories {
+    display: flex;
+    float: left;
+    padding-right: 5px;
+    cursor: pointer;
+    @include for-phone-only {
+        display: none;
+    }
+}
+
+.p-categories {
+    color: $gray-dark;
+    font-size: 14px;
+    float: left;
+}
