@@ -23,16 +23,16 @@ const Header = ({ parentHistory }) => {
 
   return (
     <header className="nav-header">
-      <div className="container">
+      <div className="container-general">
         <div className="row justify-content-center mt-2">
-          <div className="col-10">
+          <div className="col-11 col-lg-10">
             <div className="row justify-content-between">
-              <div className="col-1">
+              <div className="col-2 col-lg-1">
                 <div className="nav-logo-container">
                   <a className="nav-logo"></a>
                 </div>
               </div>
-              <div className="col-11">
+              <div className="col-10 col-lg-11">
                 <div className="nav-input-container">
                   <form onSubmit={handleSubmitSearch} className="nav-form">
                     <input

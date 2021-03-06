@@ -25,8 +25,8 @@
     float: left;
     margin: 16px;
     @include for-phone-only {
-        width: 230px;
-        height: 230px;
+        width: 70%;
+        height: 50%;
         border-radius: 4px;
         float: left;
         margin: 35px 58px 0px;
@@ -38,6 +38,7 @@
     width: 336px;
     @include for-phone-only {
         padding-left: 16px;
+        width: 100%;
     }
 }
 
@@ -67,8 +68,13 @@
 .currency-card-item {
     font-size: 12px;
     color: $gray-dark;
-    align-self: end;
-    margin-top: 44px;
+    margin-top: 10%;
+    margin-left: 85%;
+    position: absolute;
+    @include for-phone-only {
+        position: inherit;
+        margin-left: 5%;
+    }
 }
 
 .currency-container-card-item {

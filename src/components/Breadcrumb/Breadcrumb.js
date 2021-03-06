@@ -15,7 +15,7 @@ const Breadcrumb = ({
     >
       {category}
     </p>
-    {index + 1 < lengthCatgories ? <FontAwesomeIcon icon={faChevronRight} style={{
+    {(index + 1) < lengthCatgories ? <FontAwesomeIcon icon={faChevronRight} style={{
                             fontSize: 19,
                             color: '#999999',
                             float: 'left',

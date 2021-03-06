@@ -24,12 +24,12 @@ const ShowItems = ({ history }) => {
 
   const handleRedirectUrlDetail = (id) => {
     history.push({
-        pathname: `/items/${id.trim()}`,
-        data: {
-            categories: categories
-        }
+      pathname: `/items/${id.trim()}`,
+      data: {
+        categories: categories,
+      },
     });
-};
+  };
 
   const handleRedirectUrl = (category) => {
     history.push(`/items?search=${category.trim()}`);
@@ -61,7 +61,7 @@ const ShowItems = ({ history }) => {
                 ))
               ) : (
                 <>
-                <div className="row mt-2 pt-2"></div>
+                  <div className="row mt-2 pt-2"></div>
                 </>
               )}
             </div>
@@ -70,12 +70,12 @@ const ShowItems = ({ history }) => {
             <div className="row justify-content-around" key={item.id}>
               <div
                 className="col-12 card-items"
-                  onClick={() => {
-                    handleRedirectUrlDetail(item.id);
-                  }}
+                onClick={() => {
+                  handleRedirectUrlDetail(item.id);
+                }}
               >
                 <div className="row">
-                  <div className="col-10">
+                  <div className="col-12">
                     <div className="container-img-card-item">
                       <img
                         className="img-card-item"
@@ -83,7 +83,9 @@ const ShowItems = ({ history }) => {
                         alt={item.picture}
                       />
                     </div>
+                    <div className="currency-card-item">{item.city}</div>
                     <div className="container-detail-card-item">
+                    
                       <div className="price-card-items top-32-general">
                         <div className="left-item">
                           ${" "}
@@ -93,13 +95,8 @@ const ShowItems = ({ history }) => {
                         </div>
                         {item.free_shipping ? shipping : <></>}
                       </div>
-                      <p className="title-card-items">
-                        {item.title}
-                      </p>
+                      <p className="title-card-items">{item.title}</p>
                     </div>
-                  </div>
-                  <div className="col-2 currency-container-card-item">
-                    <div className="currency-card-item">{item.city}</div>
                   </div>
                 </div>
                 <hr />

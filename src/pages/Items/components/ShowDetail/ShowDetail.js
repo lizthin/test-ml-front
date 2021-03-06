@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
 import ItemsServices from "../../../../services/ItemService/ItemsService";
-import Items from "../../Items";
 import './ShowDetailStyles.scss'
 
 const ShowDetail = ({ history }) => {
@@ -18,7 +17,6 @@ const ShowDetail = ({ history }) => {
     ];
     ItemsServices.fetchItemById(id)
       .then(({ item }) => {
-        console.log(item, "itemmmm");
         setItem(item);
       })
       .catch((error) => console.warn);

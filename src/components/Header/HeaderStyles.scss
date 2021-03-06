@@ -113,7 +113,16 @@
     float: left;
     border: 1px solid $gray-light;
     @include for-phone-only {
+        background-image: url("../../assets/img/header/ic_Search.png");
+        background-size: 30% 50%;
         width: 15%;
     }
     background-color: #EEEEEE;
+}
+.container-general {
+    width: 100%;
+    /* padding-right: 15px; */
+    /* padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
 }

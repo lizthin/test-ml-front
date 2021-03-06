@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should show details items should create component details 1`] = `<Fragment />`;
+
+exports[`should show details items should useEffect 1`] = `""`;
