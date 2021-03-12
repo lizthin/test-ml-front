@@ -2,110 +2,109 @@
 @import "../../../../assets/styles/mixins.scss";
 
 .left-item {
-    float: left;
+  float: left;
 }
 
 .card-items {
-    background-color: $white;
-    cursor: pointer;
-    @include for-phone-only {
-        margin-top: 16px;
-    }
+  background-color: $white;
+  cursor: pointer;
+  @include for-phone-only {
+    margin-top: 16px;
+  }
 }
 
 .card-items:hover {
-    background-color: $gray-light-hover;
-    cursor: pointer;
+  background-color: $gray-light-hover;
+  cursor: pointer;
 }
 
 .container-img-card-item {
-    width: 180px;
-    height: 180px;
+  width: 180px;
+  height: 180px;
+  border-radius: 4px;
+  float: left;
+  margin: 16px;
+  @include for-phone-only {
+    width: 70%;
+    height: 50%;
     border-radius: 4px;
     float: left;
-    margin: 16px;
-    @include for-phone-only {
-        width: 70%;
-        height: 50%;
-        border-radius: 4px;
-        float: left;
-        margin: 35px 58px 0px;
-    }
+    margin: 35px 58px 0px;
+  }
 }
 
 .container-detail-card-item {
-    float: left;
-    width: 336px;
-    @include for-phone-only {
-        padding-left: 16px;
-        width: 100%;
-    }
+  float: left;
+  width: 336px;
+  @include for-phone-only {
+    padding-left: 16px;
+    width: 100%;
+  }
 }
 
 .price-card-items {
-    font-size: 24px;
-    color: #333;
-    float: left;
-    width: 100%;
+  font-size: 24px;
+  color: #333;
+  float: left;
+  width: 100%;
 }
 
 .title-card-items {
-    white-space: pre-wrap;
-    font-size: 18px;
-    color: #333333;
-    float: left;
-    width: 100%;
+  white-space: pre-wrap;
+  font-size: 18px;
+  color: #333333;
+  float: left;
+  width: 100%;
 }
 
 .container-img-shipping {
-    width: 17px;
-    height: 17px;
-    float: left;
-    margin-left: 6px;
-    margin-top: -1px;
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin-left: 6px;
+  margin-top: -1px;
 }
 
 .currency-card-item {
-    font-size: 12px;
-    color: $gray-dark;
-    margin-top: 10%;
-    margin-left: 85%;
-    position: absolute;
-    @include for-phone-only {
-        position: inherit;
-        margin-left: 5%;
-    }
+  font-size: 12px;
+  color: $gray-dark;
+  margin-top: 5%;
+  margin-left: 85%;
+  position: absolute;
+  @include for-phone-only {
+    position: inherit;
+    margin-left: 5%;
+  }
 }
 
 .currency-container-card-item {
-    @include for-phone-only {
-        position: absolute;
-        margin-top: 267px;
-        margin-left: 284px;
-    }
-    @include for-tablet-portrait-up {
-        margin-top: -215px;
-        margin-left: 566px;
-    
-    }
+  @include for-phone-only {
+    position: absolute;
+    margin-top: 267px;
+    margin-left: 284px;
+  }
+  @include for-tablet-portrait-up {
+    margin-top: -215px;
+    margin-left: 566px;
+  }
 }
 
 hr {
-    margin-block-end: 0;
-    margin-block-start: 0;
-    margin-inline-end: 0;
-    margin-inline-start: 0;
-    color: $gray-light;
-    width: 95%;
-    margin-left: 2%;
-    border-bottom: 1px solid $gray-light;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  color: $gray-light;
+  width: 95%;
+  margin-left: 2%;
+  border-bottom: 1px solid $gray-light;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .img-card-item,
 .img-shipping {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }

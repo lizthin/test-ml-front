@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Test | Mercado Libre | Front
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Hecho por: Lizeth Nuñez
 
-## Available Scripts
+**Indice**
 
-In the project directory, you can run:
+1. [Descripción](#description)
 
-### `npm start`
+2. [Instalación](#install)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. [Pruebas unitarias](#unittest)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. [Documentación](#docs)
 
-### `npm test`
+<a id="description"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Descripción
 
-### `npm run build`
+- Este proyecto es el desarrollo de los requerimientos de la prueba enviada por Mercado libre, esta prueba se trata de la elaboracion de paginas de busqueda de items peticionando un api.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Este proyecto fue generado con Create React App.
+<a id="install"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para la correcta instalacion del proyecto se debe realizar los siguientes pasos:
 
-### `npm run eject`
+### 1. Descargar el proyecto Front
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Dirigirse a la url `https://github.com/lizthin/test-ml-front`, clonar la rama master, ejecutar el script _npm install_ y posteriormente _npm run start_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Abrir el navegador con la ruta [http://localhost:3000](http://localhost:3000)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 2. Descargar el proyecto back
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Dirigirse a la url `https://github.com/lizthin/test-ml-back`, clonar la rama master, ejecutar el script _npm install_ y posteriormente _npm run start_
 
-## Learn More
+- Abrir el navegador con la ruta [http://localhost:3001](http://localhost:3001)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+NOTA: El proyecto front realiza peticiones al api que esta corriendo del proyecto back end, por esta razon es necesario que para el correcto funcionamiento de la prueba esten ejecutandose los dos al mismo tiempo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a id="unittest"></a>
 
-### Code Splitting
+## Pruebas unitarias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Para ejecutar las pruebas unitarias del proyecto ejecutar el script _npm run test_
+- Para verificar cobertura de las pruebas unitarias ejecutar el script _npm run test:coverage_
 
-### Analyzing the Bundle Size
+- La interfaz web de cobertura se puede consultar aqui [https://lizthin.github.io/coverage-test-ml-front/](https://lizthin.github.io/coverage-test-ml-front/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<a id="docs"></a>
 
-### Making a Progressive Web App
+## Documentación
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- La documentación técnica se realizó con jsDocs, asi que se encuentra en cada componente segun su estructura.
+- Para ejecutar la compilación de documentación ejecutar el siguiente comando *npm run docs*, posteriormente dirigirse a la carpeta docs que es generada en la raiz del proyecto, abrir el archivo `index.html` en el navegador.
+- La interfaz web de la documentación se puede consultar aqui [https://lizthin.github.io/docs-test-ml-front/index.html](https://lizthin.github.io/docs-test-ml-front/index.html)

@@ -73,7 +73,7 @@ const ShowDetail = ({ history, dataCategories, datItem }) => {
                   )}
                 </div>
               </div>
-              <div className="row row justify-content-around">
+              <div className="row card-detail justify-content-around">
                 <div className="col-12">
                   <div className="card-detail">
                     <div className="row">
