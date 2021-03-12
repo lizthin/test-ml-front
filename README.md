@@ -27,13 +27,13 @@ Para la correcta instalacion del proyecto se debe realizar los siguientes pasos:
 
 ### 1. Descargar el proyecto Front
 
-- Dirigirse a la url `https://github.com/lizthin/test-ml-front`, clonar la rama master, ejecutar el script _npm install_ y posteriormente _npm run start_
+- Dirigirse a la url [https://github.com/lizthin/test-ml-front](https://github.com/lizthin/test-ml-front), clonar la rama master, ejecutar el script `npm install` y posteriormente `npm run start`
 
 - Abrir el navegador con la ruta [http://localhost:3000](http://localhost:3000)
 
 ### 2. Descargar el proyecto back
 
-- Dirigirse a la url `https://github.com/lizthin/test-ml-back`, clonar la rama master, ejecutar el script _npm install_ y posteriormente _npm run start_
+- Dirigirse a la url [https://github.com/lizthin/test-ml-back](https://github.com/lizthin/test-ml-back), clonar la rama master, ejecutar el script `npm install` y posteriormente `npm run start`
 
 - Abrir el navegador con la ruta [http://localhost:3001](http://localhost:3001)
 
@@ -43,8 +43,8 @@ NOTA: El proyecto front realiza peticiones al api que esta corriendo del proyect
 
 ## Pruebas unitarias
 
-- Para ejecutar las pruebas unitarias del proyecto ejecutar el script _npm run test_
-- Para verificar cobertura de las pruebas unitarias ejecutar el script _npm run test:coverage_
+- Para ejecutar las pruebas unitarias del proyecto ejecutar el script `npm run test`
+- Para verificar cobertura de las pruebas unitarias ejecutar el script `npm run test:coverage`
 
 - La interfaz web de cobertura se puede consultar aqui [https://lizthin.github.io/coverage-test-ml-front/](https://lizthin.github.io/coverage-test-ml-front/)
 
@@ -53,5 +53,5 @@ NOTA: El proyecto front realiza peticiones al api que esta corriendo del proyect
 ## Documentación
 
 - La documentación técnica se realizó con jsDocs, asi que se encuentra en cada componente segun su estructura.
-- Para ejecutar la compilación de documentación ejecutar el siguiente comando *npm run docs*, posteriormente dirigirse a la carpeta docs que es generada en la raiz del proyecto, abrir el archivo `index.html` en el navegador.
+- Para ejecutar la compilación de documentación ejecutar el siguiente comando `npm run docs`, posteriormente dirigirse a la carpeta docs que es generada en la raiz del proyecto, abrir el archivo `index.html` en el navegador.
 - La interfaz web de la documentación se puede consultar aqui [https://lizthin.github.io/docs-test-ml-front/index.html](https://lizthin.github.io/docs-test-ml-front/index.html)

@@ -45,7 +45,7 @@ const Header = ({ parentHistory }) => {
     <header className="nav-header">
       <div className="container-general">
         <div className="row justify-content-center mt-2">
-          <div className="col-11 col-lg-9">
+          <div className="col-11 col-lg-9 col-xl-8">
             <div className="row justify-content-between">
               <div className="col-2 col-lg-1">
                 <div className="nav-logo-container">
