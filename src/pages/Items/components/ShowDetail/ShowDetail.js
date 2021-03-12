@@ -1,16 +1,37 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
 import ItemsServices from "../../../../services/ItemService/ItemsService";
 import './ShowDetailStyles.scss'
 
-const ShowDetail = ({ history }) => {
-  const [categories, setCategories] = useState([]);
-  const [item, setItem] = useState(null);
+/**
+ * funtion component ShowDetail, show items details
+ * @param {object} props history props route, dataCategories inicial state categories, 
+ * data items inicial state item, unit test  
+ * @returns categories breadCrum, details items
+ */
+const ShowDetail = ({ history, dataCategories, datItem }) => {
 
+  /**
+   * Hook useState categories, breadCrumb output
+   * @example setCategories(['bolsos', 'maquillaje'])
+   */
+  const [categories, setCategories] = useState(dataCategories ?? []);
+
+  /**
+   * Hook useState items, list input search and informations details
+   * @example setItem({autor:{}, item:{}})
+   */
+  const [item, setItem] = useState(datItem ?? null);
+
+  /**
+   * Hook useEffect call service fetchItemById response details items
+   * activate with change location patname props
+   */
   useEffect(() => {
-      if(history.location.data) {
-        setCategories(history.location.data.categories);
-      }
+    if (history.location.data) {
+      setCategories(history.location.data.categories);
+    }
 
     const id = history.location.pathname.split("/")[
       history.location.pathname.split("/").length - 1
@@ -22,10 +43,6 @@ const ShowDetail = ({ history }) => {
       .catch((error) => console.warn);
   }, [history.location.pathname]);
 
-  const handleRedirectUrl = (category) => {
-    history.push(`/items?search=${category.trim()}`);
-  };
-  
   const toBuy = 'Comprar';
   const titleDescription = 'Descripción del producto';
 
@@ -45,7 +62,7 @@ const ShowDetail = ({ history }) => {
                           category,
                           lengthCatgories: categories.length,
                           index,
-                          handleRedirectUrl,
+                          history
                         }}
                       />
                     ))
@@ -78,7 +95,7 @@ const ShowDetail = ({ history }) => {
                             {new Intl.NumberFormat("de-DE").format(item.price.amount)}
                           </div>
                           <div className="decimal-detail">
-                            {item.price.decimals === 0 ? '00' : item.price.decimals }
+                            {item.price.decimals === 0 ? '00' : item.price.decimals}
                           </div>
                         </div>
                         <div className="top-32-general">
@@ -108,5 +125,9 @@ const ShowDetail = ({ history }) => {
     </>
   );
 };
+
+ShowDetail.propTypes = {
+  history: PropTypes.object.isRequired
+}
 
 export default ShowDetail;

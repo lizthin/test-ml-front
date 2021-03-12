@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ItemsRouter should display ItemsRouter 1`] = `
+<Fragment>
+  <Header
+    parentHistory={
+      Object {
+        "history": Object {},
+      }
+    }
+  />
+  <div>
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/items"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/items/:id"
+      />
+    </Switch>
+  </div>
+</Fragment>
+`;

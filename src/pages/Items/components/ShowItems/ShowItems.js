@@ -5,10 +5,29 @@ import "./ShowItemsStyles.scss";
 import freeShipping from "../../../../assets/img/icons/ic_shipping@2x.png.png.png";
 import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
 
-const ShowItems = ({ history }) => {
-  const [items, setItems] = useState([]);
+/**
+ * funtion component Show Items, make list items input search response api
+ * @param {object} props history router props, data items initial state items  
+ * @returns list items, breadcrumb catefories
+ */
+const ShowItems = ({ history, dataItems }) => {
+
+  /**
+   * Hook useState items, search list items
+   * @example setItems({id:'ejemplo', title: 'ejemplo', price: {}},{id:'ejemplo', title: 'ejemplo', price: {}})
+   */
+  const [items, setItems] = useState(dataItems ?? []);
+
+  /**
+   * Hook useState categories, breadCrumb output
+   * @example setCategories(['bolsos', 'maquillaje'])
+   */
   const [categories, setCategories] = useState([]);
 
+   /**
+   * Hook useEffect call service fetchAllItemsFiltered response array items
+   * activate with change location search
+   */
   useEffect(() => {
     if (history.location.search !== "") {
       const query = history.location.search.split("=")[1];
@@ -22,6 +41,12 @@ const ShowItems = ({ history }) => {
     }
   }, [history.location.search]);
 
+  /**
+   * Funtion handleRedirectUrlDetail, change histori props pathname 
+   * activate ShowDetail component
+   * @param {string} id item details
+   * @example handleRedirectUrlDetail('MA12154') 
+   */
   const handleRedirectUrlDetail = (id) => {
     history.push({
       pathname: `/items/${id.trim()}`,
@@ -31,10 +56,9 @@ const ShowItems = ({ history }) => {
     });
   };
 
-  const handleRedirectUrl = (category) => {
-    history.push(`/items?search=${category.trim()}`);
-  };
-
+  /**
+   * const shipping put class free shiping item
+   */
   const shipping = (
     <div className="container-img-shipping">
       <img src={freeShipping} alt={freeShipping} className="img-shipping" />
@@ -55,7 +79,7 @@ const ShowItems = ({ history }) => {
                       category,
                       lengthCatgories: categories.length,
                       index,
-                      handleRedirectUrl,
+                      history,
                     }}
                   />
                 ))

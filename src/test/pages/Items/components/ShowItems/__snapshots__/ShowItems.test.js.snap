@@ -1,6 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should show items list whit querty should create list items 1`] = `
+exports[`should show items list with querty should component with item.free_shipping false 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-around"
+  >
+    <div
+      className="col-10"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="row mt-2 pt-2"
+          />
+        </div>
+      </div>
+      <div
+        className="row justify-content-around"
+        key="MLA863083993"
+      >
+        <div
+          className="col-12 card-items"
+          onClick={[Function]}
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-12"
+            >
+              <div
+                className="container-img-card-item"
+              >
+                <img
+                  alt="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                  className="img-card-item"
+                  src="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                />
+              </div>
+              <div
+                className="currency-card-item"
+              />
+              <div
+                className="container-detail-card-item"
+              >
+                <div
+                  className="price-card-items top-32-general"
+                >
+                  <div
+                    className="left-item"
+                  >
+                    $
+                     
+                    2,190
+                  </div>
+                </div>
+                <p
+                  className="title-card-items"
+                >
+                  Peluche Chimuelo / Furia Luminosa 30 Cm Hermosos
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should show items list with querty should component with item.free_shipping true 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-around"
+  >
+    <div
+      className="col-10"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="row mt-2 pt-2"
+          />
+        </div>
+      </div>
+      <div
+        className="row justify-content-around"
+        key="MLA863083993"
+      >
+        <div
+          className="col-12 card-items"
+          onClick={[Function]}
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-12"
+            >
+              <div
+                className="container-img-card-item"
+              >
+                <img
+                  alt="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                  className="img-card-item"
+                  src="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                />
+              </div>
+              <div
+                className="currency-card-item"
+              />
+              <div
+                className="container-detail-card-item"
+              >
+                <div
+                  className="price-card-items top-32-general"
+                >
+                  <div
+                    className="left-item"
+                  >
+                    $
+                     
+                    2,190
+                  </div>
+                  <div
+                    className="container-img-shipping"
+                  >
+                    <img
+                      alt="ic_shipping@2x.png.png.png"
+                      className="img-shipping"
+                      src="ic_shipping@2x.png.png.png"
+                    />
+                  </div>
+                </div>
+                <p
+                  className="title-card-items"
+                >
+                  Peluche Chimuelo / Furia Luminosa 30 Cm Hermosos
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should show items list with querty should do useEffect with service ItemsServices result 1`] = `
 <div
   className="container"
 >
@@ -26,7 +189,33 @@ exports[`should show items list whit querty should create list items 1`] = `
 </div>
 `;
 
-exports[`should show items list whit querty should useEffect 1`] = `
+exports[`should show items list with querty should useEffect with service ItemsServices error 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-around"
+  >
+    <div
+      className="col-10"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="row mt-2 pt-2"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should show items list with querty should useEffect with service and mockProperties.location.search empty 1`] = `
 <div
   className="container"
 >

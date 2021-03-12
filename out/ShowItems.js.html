@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ShowItems.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ShowItems.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import ItemsServices from "../../../../services/ItemService/ItemsService";
+import "./ShowItemsStyles.scss";
+import freeShipping from "../../../../assets/img/icons/ic_shipping@2x.png.png.png";
+import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
+
+/**
+ * funtion component Show Items, make list items input search response api
+ * @param {object} props history router props, data items initial state items  
+ * @returns list items, breadcrumb catefories
+ */
+const ShowItems = ({ history, dataItems }) => {
+
+  /**
+   * Hook useState items, search list items
+   * @example setItems({id:'ejemplo', title: 'ejemplo', price: {}},{id:'ejemplo', title: 'ejemplo', price: {}})
+   */
+  const [items, setItems] = useState(dataItems ?? []);
+
+  /**
+   * Hook useState categories, breadCrumb output
+   * @example setCategories(['bolsos', 'maquillaje'])
+   */
+  const [categories, setCategories] = useState([]);
+
+   /**
+   * Hook useEffect call service fetchAllItemsFiltered response array items
+   * activate with change location search
+   */
+  useEffect(() => {
+    if (history.location.search !== "") {
+      const query = history.location.search.split("=")[1];
+
+      ItemsServices.fetchAllItemsFiltered(query)
+        .then(({ items, categories }) => {
+          setItems(items.slice(0, 4));
+          setCategories(categories.slice(0, 5));
+        })
+        .catch((error) => console.warn);
+    }
+  }, [history.location.search]);
+
+  /**
+   * Funtion handleRedirectUrlDetail, change histori props pathname 
+   * activate ShowDetail component
+   * @param {string} id item details
+   * @example handleRedirectUrlDetail('MA12154') 
+   */
+  const handleRedirectUrlDetail = (id) => {
+    history.push({
+      pathname: `/items/${id.trim()}`,
+      data: {
+        categories: categories,
+      },
+    });
+  };
+
+  /**
+   * const shipping put class free shiping item
+   */
+  const shipping = (
+    &lt;div className="container-img-shipping">
+      &lt;img src={freeShipping} alt={freeShipping} className="img-shipping" />
+    &lt;/div>
+  );
+
+  return (
+    &lt;div className="container">
+      &lt;div className="row justify-content-around">
+        &lt;div className="col-10">
+          &lt;div className="row">
+            &lt;div className="col-12">
+              {categories.length > 0 ? (
+                categories.map((category, index) => (
+                  &lt;Breadcrumb
+                    key={category}
+                    properties={{
+                      category,
+                      lengthCatgories: categories.length,
+                      index,
+                      history,
+                    }}
+                  />
+                ))
+              ) : (
+                &lt;>
+                  &lt;div className="row mt-2 pt-2">&lt;/div>
+                &lt;/>
+              )}
+            &lt;/div>
+          &lt;/div>
+          {items.map((item) => (
+            &lt;div className="row justify-content-around" key={item.id}>
+              &lt;div
+                className="col-12 card-items"
+                onClick={() => {
+                  handleRedirectUrlDetail(item.id);
+                }}
+              >
+                &lt;div className="row">
+                  &lt;div className="col-12">
+                    &lt;div className="container-img-card-item">
+                      &lt;img
+                        className="img-card-item"
+                        src={item.picture}
+                        alt={item.picture}
+                      />
+                    &lt;/div>
+                    &lt;div className="currency-card-item">{item.city}&lt;/div>
+                    &lt;div className="container-detail-card-item">
+                    
+                      &lt;div className="price-card-items top-32-general">
+                        &lt;div className="left-item">
+                          ${" "}
+                          {new Intl.NumberFormat("de-DE").format(
+                            item.price.amount
+                          )}
+                        &lt;/div>
+                        {item.free_shipping ? shipping : &lt;>&lt;/>}
+                      &lt;/div>
+                      &lt;p className="title-card-items">{item.title}&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+                &lt;hr />
+              &lt;/div>
+            &lt;/div>
+          ))}
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+ShowItems.propTypes = {
+  history: PropTypes.object.isRequired,
+};
+
+export default ShowItems;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#ShowItems">ShowItems</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Mar 11 2021 22:16:14 GMT-0500 (GMT-05:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

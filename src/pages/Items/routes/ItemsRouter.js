@@ -4,11 +4,16 @@ import {
     Route,
 } from "react-router-dom";
 import Header from '../../../components/Header/Header';
-import ShowDetail from '../components/ShowItemDetail/ShowDetail';
+import ShowDetail from '../components/ShowDetail/ShowDetail';
 import ShowItems from '../components/ShowItems/ShowItems';
 
 import PropTypes from 'prop-types'
 
+/**
+ * funtion component ItemsRouter, call component with change path 
+ * @param {props object} porps parentHistory, route props 
+ * @returns component route 
+ */
 const  ItemsRouter = ({parentHistory}) => {
         return (
             <>

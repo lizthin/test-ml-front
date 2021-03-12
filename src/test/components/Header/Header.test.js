@@ -1,35 +1,49 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { mount } from "enzyme";
 import Header from "../../../components/Header/Header";
-import { act } from "react-dom/test-utils";
 
 describe("should create header whit input", () => {
-  
+
   const mockProperties = {
     location: {
       hash: "",
       key: "6ti0yy",
       pathname: "/items",
-      search: "?search=futbol",
+      search: "",
     },
+    push: jest.fn()
   };
 
   test("should create header", () => {
-    const wrapper = shallow(<Header parentHistory={mockProperties} />);
+    const wrapper = mount(<Header parentHistory={mockProperties} />);
     expect(wrapper).toMatchSnapshot()
   });
 
-  // test('should useEffect', () => {
-  //   const event = { 
-  //     defaultPrevented: true,
-  //     preventDefault: () => {} };
-  //   jest.spyOn(event, 'preventDefault');
-    
-  //   const wrapper = mount(<Header parentHistory={mockProperties} />);
-  //     wrapper.find('.nav-form').simulate('submit')(event);
+  test("should create header with serach parameter queryString", () => {
+    mockProperties.location.search = "?search=furtbol";
+    const wrapper = mount(<Header parentHistory={mockProperties} />);
+    expect(wrapper).toMatchSnapshot()
+  });
 
-  //   expect(wrapper).toMatchSnapshot();
-    
-  // })
-  
+  test('should handleSubmitSearch and param search', () => {
+    mockProperties.location.search = "?search=trajes";
+    const wrapper = mount(<Header parentHistory={mockProperties} />);
+    wrapper.find('form').simulate('submit', { preventDefault() { } })
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  test('should submit with param search empty', () => {
+    mockProperties.location.search = "?search=";
+    const wrapper = mount(<Header parentHistory={mockProperties} />);
+    wrapper.find('form').simulate('submit', { preventDefault() { } })
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  test('should input set param', () => {
+    mockProperties.location.search = "?search=arbol";
+    const wrapper = mount(<Header parentHistory={mockProperties} />);
+    wrapper.find('.nav-input').simulate('change');
+    expect(wrapper).toMatchSnapshot();
+  })
+
 });

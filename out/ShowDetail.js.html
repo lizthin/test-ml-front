@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: ShowDetail.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: ShowDetail.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
+import ItemsServices from "../../../../services/ItemService/ItemsService";
+import './ShowDetailStyles.scss'
+
+/**
+ * funtion component ShowDetail, show items details
+ * @param {object} props history props route, dataCategories inicial state categories, 
+ * data items inicial state item, unit test  
+ * @returns categories breadCrum, details items
+ */
+const ShowDetail = ({ history, dataCategories, datItem }) => {
+
+  /**
+   * Hook useState categories, breadCrumb output
+   * @example setCategories(['bolsos', 'maquillaje'])
+   */
+  const [categories, setCategories] = useState(dataCategories ?? []);
+
+  /**
+   * Hook useState items, list input search and informations details
+   * @example setItem({autor:{}, item:{}})
+   */
+  const [item, setItem] = useState(datItem ?? null);
+
+  /**
+   * Hook useEffect call service fetchItemById response details items
+   * activate with change location patname props
+   */
+  useEffect(() => {
+    if (history.location.data) {
+      setCategories(history.location.data.categories);
+    }
+
+    const id = history.location.pathname.split("/")[
+      history.location.pathname.split("/").length - 1
+    ];
+    ItemsServices.fetchItemById(id)
+      .then(({ item }) => {
+        setItem(item);
+      })
+      .catch((error) => console.warn);
+  }, [history.location.pathname]);
+
+  const toBuy = 'Comprar';
+  const titleDescription = 'Descripción del producto';
+
+  return (
+    &lt;>
+      {item !== null &amp;&amp; (
+        &lt;div className="container">
+          &lt;div className="row justify-content-around">
+            &lt;div className="col-10">
+              &lt;div className="row">
+                &lt;div className="col-12">
+                  {categories.length > 0 ? (
+                    categories.map((category, index) => (
+                      &lt;Breadcrumb
+                        key={category}
+                        properties={{
+                          category,
+                          lengthCatgories: categories.length,
+                          index,
+                          history
+                        }}
+                      />
+                    ))
+                  ) : (
+                    &lt;>
+                      &lt;div className="row mt-2 pt-2">&lt;/div>
+                    &lt;/>
+                  )}
+                &lt;/div>
+              &lt;/div>
+              &lt;div className="row row justify-content-around">
+                &lt;div className="col-12">
+                  &lt;div className="card-detail">
+                    &lt;div className="row">
+                      &lt;div className="container-img-card-detail">
+                        &lt;img
+                          className="img-card-detail"
+                          src={item.picture}
+                          alt={item.picture}
+                        />
+                      &lt;/div>
+                      &lt;div className="info-card-detail">
+                        &lt;div className="state-seller-detail">
+                          {item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity === 1 ? 'vendido' : 'vendidos'}
+                        &lt;/div>
+                        &lt;div className="title-card-detail">{item.title}&lt;/div>
+                        &lt;div className="top-10-detail">
+                          &lt;div className="amount-detail">
+                            ${" "}
+                            {new Intl.NumberFormat("de-DE").format(item.price.amount)}
+                          &lt;/div>
+                          &lt;div className="decimal-detail">
+                            {item.price.decimals === 0 ? '00' : item.price.decimals}
+                          &lt;/div>
+                        &lt;/div>
+                        &lt;div className="top-32-general">
+                          &lt;button className="btn-to-buy-detail">
+                            {toBuy}
+                          &lt;/button>
+                        &lt;/div>
+                      &lt;/div>
+                    &lt;/div>
+                    &lt;div className="row">
+                      &lt;div className="info-description-detail">
+                        &lt;div className="title-card-description-detail">
+                          {titleDescription}
+                        &lt;/div>
+                        &lt;div className="description-detail">
+                          {item.description}
+                        &lt;/div>
+                      &lt;/div>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      )}
+    &lt;/>
+  );
+};
+
+ShowDetail.propTypes = {
+  history: PropTypes.object.isRequired
+}
+
+export default ShowDetail;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#ShowDetail">ShowDetail</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Thu Mar 11 2021 22:27:19 GMT-0500 (GMT-05:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

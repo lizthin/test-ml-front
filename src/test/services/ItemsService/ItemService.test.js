@@ -168,28 +168,28 @@ const mockItemsDetail = {
   },
 };
 
-describe("Test ItemsAppService", () => {
-  test('should get 4 items minimun in querty "futbol")', async () => {
+describe("Test Item service", () => {
+  test('should get 4 items "peluches")', async () => {
     jest
       .spyOn(global, "fetch")
       .mockResolvedValue(Promise.resolve({ json: () => mockAllItems }));
-    const { items } = await ItemsServices.fetchAllItemsFiltered("futbol");
+    const { items } = await ItemsServices.fetchAllItemsFiltered("peluches");
     expect(global.fetch).toHaveBeenCalledTimes(1);
     expect(items.slice(0, 4).length).toBe(4);
     global.fetch.mockClear();
   });
 
-  test('should get an empty object searched by empty fetchAllItemsFiltered("")', async () => {
+  test('should not get list filtered input empty', async () => {
     const result = await ItemsServices.fetchAllItemsFiltered("");
     expect(Object.keys(result).length).toBe(0);
   });
 
-  test('should get an empty object withoout parameter "query " fetchAllItemsFiltered()', async () => {
+  test('should not get list filtered without param metod', async () => {
     const result = await ItemsServices.fetchAllItemsFiltered();
     expect(Object.keys(result).length).toBe(0);
   });
 
-  test("should get catch error fetchAllItemsFiltered()", async () => {
+  test("should get catch error", async () => {
     jest.spyOn(global, "fetch").mockRejectedValue({ error: "error" });
     try {
       await ItemsServices.fetchAllItemsFiltered("error");
@@ -202,17 +202,17 @@ describe("Test ItemsAppService", () => {
     global.fetch.mockClear();
   });
 
-  test('should get objecht with 7 keys in fetchItemById("MLA842198454")', async () => {
+  test('should get objecht with 7 positions', async () => {
     jest
       .spyOn(global, "fetch")
       .mockResolvedValue(Promise.resolve({ json: () => mockItemsDetail }));
-    const result = await ItemsServices.fetchItemById("MLA842198454");
+    const result = await ItemsServices.fetchItemById("MLA54872");
 
-    const arrayAuthorReturn = ["author", "item"];
+    const arrayMock = ["author", "item"];
 
-    expect(Object.keys(result)).toEqual(arrayAuthorReturn);
+    expect(Object.keys(result)).toEqual(arrayMock);
 
-    const arrayItemsReturn = [
+    const arrayMockReturn = [
       "id",
       "title",
       "price",
@@ -223,25 +223,25 @@ describe("Test ItemsAppService", () => {
       "description",
     ];
     expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(Object.keys(result.item)).toEqual(arrayItemsReturn);
+    expect(Object.keys(result.item)).toEqual(arrayMockReturn);
     global.fetch.mockClear();
   });
 
-  test('should get an empty object searched by empty fetchItemById("")', async () => {
+  test('should get an empty object searched by empty detail', async () => {
     const result = await ItemsServices.fetchItemById("");
     expect(Object.keys(result).length).toBe(0);
   });
-  test('should get an empty object without parameter "id" in fetchItemById()', async () => {
+  test('should get an empty object without parameter', async () => {
     const result = await ItemsServices.fetchItemById();
     expect(Object.keys(result).length).toBe(0);
   });
 
-  test("should get catch error fetchItemById()", async () => {
+  test("should get catch error service detail", async () => {
     jest.spyOn(global, "fetch").mockRejectedValue({ error: "error" });
     try {
       await ItemsServices.fetchItemById("error");
-    } catch (e) {
-      expect(e).toEqual({
+    } catch (err) {
+      expect(err).toEqual({
         error: "error",
       });
     }

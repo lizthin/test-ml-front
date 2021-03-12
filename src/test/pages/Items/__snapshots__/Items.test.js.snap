@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Items should display component <ItemsRouter history={mockProperties} /> 1`] = `
+<ItemsRouter
+  parentHistory={
+    Object {
+      "location": Object {
+        "hash": "",
+        "key": "6ti0yy",
+        "pathname": "/items",
+        "search": "",
+      },
+      "push": [MockFunction],
+    }
+  }
+/>
+`;

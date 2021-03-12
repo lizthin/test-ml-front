@@ -1,7 +1,17 @@
 import { server, api, endpoint_items }  from "../../config/env";
 import urlTemplate from 'url-template'
 
+/**
+ * function itemsServices, container funtion service by search and id
+ */
 const ItemsServices = {
+
+    /**
+     * funtion featch fetchAllItemsFiltered, call api search list items
+     * called by ShowItems component 
+     * @param {string} query input search  
+     * @returns promise list items 
+     */
     fetchAllItemsFiltered: async (query) => {
         try {
             if (query) {
@@ -21,6 +31,13 @@ const ItemsServices = {
             throw  await error
         }
     },
+
+    /**
+     * funtion fetchItemById call details items id
+     * called by ShowDetails component 
+     * @param {string} id items  
+     * @returns promise details items  
+     */
     fetchItemById: async (id) => {
         try {
             if (id) {

@@ -4,10 +4,4 @@ import './styles/index.scss';
 import '../node_modules/bootstrap-4-grid/scss/grid.scss'
 import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
+ReactDOM.render(<App />, document.getElementById('root'));

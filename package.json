@@ -9,7 +9,9 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "bootstrap-4-grid": "^3.4.0",
+    "enzyme": "^3.11.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -17,15 +19,13 @@
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1",
     "url-template": "^2.0.8",
-    "web-vitals": "^1.1.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
-    "enzyme": "^3.11.0"
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-coverage": "react-scripts test --coverage --watchAll=true",
+    "test:coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -47,6 +47,14 @@
     ]
   },
   "devDependencies": {
-    "enzyme-to-json": "^3.6.1"
+    "enzyme-to-json": "^3.6.1",
+    "jsdoc": "^3.6.6",
+    "react-styleguidist": "^11.1.5"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "<rootDir>/src/config/env.js"
+    ]
   }
 }

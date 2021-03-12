@@ -1,3 +1,7 @@
+/**
+ * Environmet definition ambient, escalable server deploy 
+ */
+
 let PROD = false;
 if (process.env.NODE_ENV === 'production') {
     PROD = true;

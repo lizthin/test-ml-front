@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test app router should display <App /> 1`] = `
+<Fragment>
+  <BrowserRouter>
+    <div>
+      <Switch>
+        <Route
+          component={[Function]}
+          path="/"
+        />
+      </Switch>
+    </div>
+  </BrowserRouter>
+</Fragment>
+`;

@@ -1,5 +1,469 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should show details items should create component details 1`] = `<Fragment />`;
+exports[`should show details items should create component ShowDetail with categories decimal different 0 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-around"
+  >
+    <div
+      className="col-10"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="flex-categories"
+            key="deportes"
+          >
+            <p
+              className="p-categories"
+              onClick={[Function]}
+            >
+              deportes
+            </p>
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-chevron-right fa-w-10 "
+              data-icon="chevron-right"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "color": "#999999",
+                  "float": "left",
+                  "fontSize": 19,
+                  "paddingLeft": 5,
+                  "paddingRigth": 5,
+                }
+              }
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </div>
+          <div
+            className="flex-categories"
+            key="equipos"
+          >
+            <p
+              className="p-categories"
+              onClick={[Function]}
+            >
+              equipos
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row row justify-content-around"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="card-detail"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="container-img-card-detail"
+              >
+                <img
+                  alt="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                  className="img-card-detail"
+                  src="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                />
+              </div>
+              <div
+                className="info-card-detail"
+              >
+                <div
+                  className="state-seller-detail"
+                >
+                  Usado
+                   - 
+                  1
+                   
+                  vendido
+                </div>
+                <div
+                  className="title-card-detail"
+                >
+                  Peluche Chimuelo / Furia Luminosa 30 Cm Hermosos
+                </div>
+                <div
+                  className="top-10-detail"
+                >
+                  <div
+                    className="amount-detail"
+                  >
+                    $
+                     
+                    2,190
+                  </div>
+                  <div
+                    className="decimal-detail"
+                  >
+                    2
+                  </div>
+                </div>
+                <div
+                  className="top-32-general"
+                >
+                  <button
+                    className="btn-to-buy-detail"
+                  >
+                    Comprar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="row"
+            >
+              <div
+                className="info-description-detail"
+              >
+                <div
+                  className="title-card-description-detail"
+                >
+                  Descripción del producto
+                </div>
+                <div
+                  className="description-detail"
+                >
+                  LEER PRECIO X CADA UNO 
 
-exports[`should show details items should useEffect 1`] = `""`;
+Hermoso chimuelo - furia luminosa de entrenando a tu dragón 30 cm hermosos 
+PRECIO X CADA UNO
+-Entregamos a una cuadra de SAN JUAN Y BOEDO
+
+-HACEMOS ENVIOS en caba (Se realiza por motomensajería, si realiza la compra antes de las 12 m de lunes a viernes en días hábiles la entrega se realiza en el día, si realiza la compra después de las 12 am la entrega se realiza el primer día hábil luego de realizada la compra, si necesita que realicemos la entrega en una franja horaria al finalizar la compra escríbanos su preferencia por mensajería de Mercadolibre para tenerlo en cuenta.
+
+-Servicio de Mensajería en CABA , consulte el costo, los días de lluvia el servicio tiene un recargo del 50%
+
+-ENVIOS A TODO EL PAIS (Realizamos envíos hasta su domicilio dentro de la República Argentina por el servicio de MercadoEnvíos. El valor del mismo lo obtendrá ingresando su código postal en el calculador.
+
+-SU PREGUNTA NO MOLESTA
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should show details items should create component ShowDetail with dataCategories empty 1`] = `""`;
+
+exports[`should show details items should create component ShowDetail with dataCategories mock initial state 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-around"
+  >
+    <div
+      className="col-10"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="flex-categories"
+            key="deportes"
+          >
+            <p
+              className="p-categories"
+              onClick={[Function]}
+            >
+              deportes
+            </p>
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-chevron-right fa-w-10 "
+              data-icon="chevron-right"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "color": "#999999",
+                  "float": "left",
+                  "fontSize": 19,
+                  "paddingLeft": 5,
+                  "paddingRigth": 5,
+                }
+              }
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </div>
+          <div
+            className="flex-categories"
+            key="equipos"
+          >
+            <p
+              className="p-categories"
+              onClick={[Function]}
+            >
+              equipos
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row row justify-content-around"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="card-detail"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="container-img-card-detail"
+              >
+                <img
+                  alt="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                  className="img-card-detail"
+                  src="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                />
+              </div>
+              <div
+                className="info-card-detail"
+              >
+                <div
+                  className="state-seller-detail"
+                >
+                  Nuevo
+                   - 
+                  25
+                   
+                  vendidos
+                </div>
+                <div
+                  className="title-card-detail"
+                >
+                  Peluche Chimuelo / Furia Luminosa 30 Cm Hermosos
+                </div>
+                <div
+                  className="top-10-detail"
+                >
+                  <div
+                    className="amount-detail"
+                  >
+                    $
+                     
+                    2,190
+                  </div>
+                  <div
+                    className="decimal-detail"
+                  >
+                    00
+                  </div>
+                </div>
+                <div
+                  className="top-32-general"
+                >
+                  <button
+                    className="btn-to-buy-detail"
+                  >
+                    Comprar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="row"
+            >
+              <div
+                className="info-description-detail"
+              >
+                <div
+                  className="title-card-description-detail"
+                >
+                  Descripción del producto
+                </div>
+                <div
+                  className="description-detail"
+                >
+                  LEER PRECIO X CADA UNO 
+
+Hermoso chimuelo - furia luminosa de entrenando a tu dragón 30 cm hermosos 
+PRECIO X CADA UNO
+-Entregamos a una cuadra de SAN JUAN Y BOEDO
+
+-HACEMOS ENVIOS en caba (Se realiza por motomensajería, si realiza la compra antes de las 12 m de lunes a viernes en días hábiles la entrega se realiza en el día, si realiza la compra después de las 12 am la entrega se realiza el primer día hábil luego de realizada la compra, si necesita que realicemos la entrega en una franja horaria al finalizar la compra escríbanos su preferencia por mensajería de Mercadolibre para tenerlo en cuenta.
+
+-Servicio de Mensajería en CABA , consulte el costo, los días de lluvia el servicio tiene un recargo del 50%
+
+-ENVIOS A TODO EL PAIS (Realizamos envíos hasta su domicilio dentro de la República Argentina por el servicio de MercadoEnvíos. El valor del mismo lo obtendrá ingresando su código postal en el calculador.
+
+-SU PREGUNTA NO MOLESTA
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should show details items should create component received mock properties data null 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row justify-content-around"
+  >
+    <div
+      className="col-10"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="row mt-2 pt-2"
+          />
+        </div>
+      </div>
+      <div
+        className="row row justify-content-around"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="card-detail"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="container-img-card-detail"
+              >
+                <img
+                  alt="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                  className="img-card-detail"
+                  src="http://http2.mlstatic.com/D_843845-MLA42260331923_062020-I.jpg"
+                />
+              </div>
+              <div
+                className="info-card-detail"
+              >
+                <div
+                  className="state-seller-detail"
+                >
+                  Usado
+                   - 
+                  1
+                   
+                  vendido
+                </div>
+                <div
+                  className="title-card-detail"
+                >
+                  Peluche Chimuelo / Furia Luminosa 30 Cm Hermosos
+                </div>
+                <div
+                  className="top-10-detail"
+                >
+                  <div
+                    className="amount-detail"
+                  >
+                    $
+                     
+                    2,190
+                  </div>
+                  <div
+                    className="decimal-detail"
+                  >
+                    2
+                  </div>
+                </div>
+                <div
+                  className="top-32-general"
+                >
+                  <button
+                    className="btn-to-buy-detail"
+                  >
+                    Comprar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              className="row"
+            >
+              <div
+                className="info-description-detail"
+              >
+                <div
+                  className="title-card-description-detail"
+                >
+                  Descripción del producto
+                </div>
+                <div
+                  className="description-detail"
+                >
+                  LEER PRECIO X CADA UNO 
+
+Hermoso chimuelo - furia luminosa de entrenando a tu dragón 30 cm hermosos 
+PRECIO X CADA UNO
+-Entregamos a una cuadra de SAN JUAN Y BOEDO
+
+-HACEMOS ENVIOS en caba (Se realiza por motomensajería, si realiza la compra antes de las 12 m de lunes a viernes en días hábiles la entrega se realiza en el día, si realiza la compra después de las 12 am la entrega se realiza el primer día hábil luego de realizada la compra, si necesita que realicemos la entrega en una franja horaria al finalizar la compra escríbanos su preferencia por mensajería de Mercadolibre para tenerlo en cuenta.
+
+-Servicio de Mensajería en CABA , consulte el costo, los días de lluvia el servicio tiene un recargo del 50%
+
+-ENVIOS A TODO EL PAIS (Realizamos envíos hasta su domicilio dentro de la República Argentina por el servicio de MercadoEnvíos. El valor del mismo lo obtendrá ingresando su código postal en el calculador.
+
+-SU PREGUNTA NO MOLESTA
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should show details items should useEffect  with service ItemsServices error 1`] = `""`;
+
+exports[`should show details items should useEffect with service ItemsServices 1`] = `""`;
